@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -91,7 +91,47 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/11/proguard/" data-id="ciz00im980000povo87epxoy4" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/02/11/proguard/" data-id="ciz00m8560003ckvoz2b18nqv" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-关于ProGuard" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/11/关于ProGuard/" class="article-date">
+  <time datetime="2017-02-10T16:12:26.000Z" itemprop="datePublished">2017-02-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/11/关于ProGuard/">ProGuard</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><blockquote>
+<p>由于本人开发的系统库是使用反射的方式获取应用的回调，必须通过反射扫描有什么方法的时候才能使用；<br> 但是，有个用户反馈是个功能失效，经过反复调试才发现原来原因就是反射扫描不到，但是本人在应用开发<br> 上是没有该问题出现的，经过反复验证才发现原来是源码系统环境下编译的应用是有一部分的编译优化的；</p>
+</blockquote>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p> 　ProGuard能够对Java类中的代码进行压缩（Shrink）,优化（Optimize）,混淆（Obfuscate）,预检（Preveirfy）。<br>　　1. 压缩（Shrink）:在压缩处理这一步中，用于检测和删除没有使用的类，字段，方法和属性。<br>　　2. 优化（Optimize）:在优化处理这一步中，对字节码进行优化，并且移除无用指令。<br>　　3. 混淆（Obfuscate）:在混淆处理这一步中，使用a,b,c等无意义的名称，对类，字段和方法进行重命名。<br>　　4. 预检（Preveirfy）:在预检这一步中，主要是在Java平台上对处理后的代码进行预检。<br>　　对于ProGuard执行流程图如下图所示。 </p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> 　1. 在android.mk 增加如下</div><div class="line">       LOCAL_PROGUARD_FLAG_FILES := proguard.flags</div><div class="line">2.	proguard.flags 如下编写</div><div class="line">    -dontshrink</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/11/关于ProGuard/" data-id="ciz00m8590004ckvo723n14hb" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -130,7 +170,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/09/hello/" data-id="ciyzzu1yr0002dcvos9v8kzuc" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/02/09/hello/" data-id="ciz00m8530002ckvom86c4zre" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -166,7 +206,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/09/new-first-blog/" data-id="ciyzzu1yi0001dcvo8zzjbomv" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/02/09/new-first-blog/" data-id="ciz00m84o0001ckvof32lfvn5" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -211,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/09/hello-world/" data-id="ciyzzu1ya0000dcvomgawd1iz" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/02/09/hello-world/" data-id="ciz00m84h0000ckvo8tmpr0a4" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -236,7 +276,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
@@ -246,12 +286,16 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
             <a href="/2017/02/11/proguard/">ProGuard</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/11/关于ProGuard/">ProGuard</a>
           </li>
         
           <li>
@@ -279,7 +323,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
